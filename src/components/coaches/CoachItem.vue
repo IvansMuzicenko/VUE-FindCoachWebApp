@@ -8,8 +8,7 @@
         :key="area"
         :type="area"
         :title="area"
-        >{{ area }}</base-badge
-      >
+      ></base-badge>
     </div>
     <div class="actions">
       <base-button mode="outline" link :to="coachContactLink"
@@ -21,10 +20,7 @@
 </template>
 
 <script>
-import BaseBadge from '../ui/BaseBadge.vue';
-import BaseButton from '../ui/BaseButton.vue';
 export default {
-  components: { BaseBadge, BaseButton },
   props: ['id', 'firstName', 'lastName', 'rate', 'areas'],
   computed: {
     fullName() {
@@ -35,8 +31,8 @@ export default {
     },
     coachDetailsLink() {
       return this.$route.path + '/' + this.id;
-    },
-  },
+    }
+  }
 };
 </script>
 

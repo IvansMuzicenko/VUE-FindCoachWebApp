@@ -8,15 +8,20 @@
   <section>
     <base-card>
       <header>
-        <h2>This is what you searching for?</h2>
-        <base-button link :to="contactLink">Contact coach</base-button>
+        <h2>Interested? Reach out now!</h2>
+        <base-button link :to="contactLink">Contact</base-button>
       </header>
       <router-view></router-view>
     </base-card>
   </section>
   <section>
     <base-card>
-      <base-badge v-for="area in areas" :key="area" :type="area"></base-badge>
+      <base-badge
+        v-for="area in areas"
+        :key="area"
+        :type="area"
+        :title="area"
+      ></base-badge>
       <p>{{ description }}</p>
     </base-card>
   </section>
@@ -27,7 +32,7 @@ export default {
   props: ['id'],
   data() {
     return {
-      selectedCoach: null,
+      selectedCoach: null
     };
   },
   computed: {
@@ -45,12 +50,12 @@ export default {
     },
     contactLink() {
       return this.$route.path + '/' + this.id + '/contact';
-    },
+    }
   },
   created() {
     this.selectedCoach = this.$store.getters['coaches/coaches'].find(
-      (coach) => coach.id === this.id
+      coach => coach.id === this.id
     );
-  },
+  }
 };
 </script>

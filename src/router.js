@@ -16,12 +16,12 @@ const router = createRouter({
       path: '/coaches/:id',
       component: CoachDetail,
       props: true,
-      children: [{ path: 'contact', component: ContactCoach }],
+      children: [{ path: 'contact', component: ContactCoach }]
     },
     { path: '/register', component: CoachRegistation },
     { path: '/requests', component: RequestsReceived },
-    { path: '/:notFound(.*)', component: NotFound },
-  ],
+    { path: '/:notFound(.*)', component: NotFound }
+  ]
 });
 
 export default router;
