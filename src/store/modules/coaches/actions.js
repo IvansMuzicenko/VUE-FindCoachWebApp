@@ -10,7 +10,7 @@ export default {
     };
 
     const response = await fetch(
-      `https://vue-http-demo-85e9e.firebaseio.com/coaches/${userId}.json`,
+      `https://vue-find-coach-31575-default-rtdb.europe-west1.firebasedatabase.app/coaches/${userId}.json`,
       {
         method: 'PUT',
         body: JSON.stringify(coachData)
