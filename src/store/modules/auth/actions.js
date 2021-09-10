@@ -1,7 +1,7 @@
 export default {
   async login(context, payload) {
     const response = await fetch(
-      'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AAAAJyW2UeE:APA91bG11In0ea-CBRx08XL_WgRZD183Ul6tS_ElKglVFjpDREWY-zz_cyFrP3P_u3QNqe8zKRBWCE0ib3Em4UiF3rzjtfVZ4J4dXmAn-y5AHkmNLRqFCdHK_sDiPyVuhnd2oc6f7adP',
+      'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBtTowwSctC6YzHjg3byFZv8TM_AbuavUw',
       {
         method: 'POST',
         body: JSON.stringify({
@@ -31,7 +31,7 @@ export default {
   },
   async signup(context, payload) {
     const response = await fetch(
-      'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AAAAJyW2UeE:APA91bG11In0ea-CBRx08XL_WgRZD183Ul6tS_ElKglVFjpDREWY-zz_cyFrP3P_u3QNqe8zKRBWCE0ib3Em4UiF3rzjtfVZ4J4dXmAn-y5AHkmNLRqFCdHK_sDiPyVuhnd2oc6f7adP',
+      'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBtTowwSctC6YzHjg3byFZv8TM_AbuavUw',
       {
         method: 'POST',
         body: JSON.stringify({
